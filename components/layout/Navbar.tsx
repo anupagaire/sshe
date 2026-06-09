@@ -16,22 +16,22 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "/" },
     {
-      label: "Academics",
-      href: "#",
-      dropdown: ["Undergraduate", "Postgraduate", "PhD Programs", "Online Courses"],
+      label: "About",
+      href: "/about",
+      // dropdown: ["Undergraduate", "Postgraduate", "PhD Programs", "Online Courses"],
     },
     {
       label: "Admissions",
-      href: "#",
-      dropdown: ["How to Apply", "Scholarships", "Fee Structure", "Important Dates"],
+      href: "/admissions",
+      // dropdown: ["How to Apply", "Scholarships", "Fee Structure", "Important Dates"],
     },
     {
       label: "Campus",
       href: "#",
       dropdown: ["Facilities", "Hostel", "Library", "Sports"],
     },
-    { label: "Research", href: "#" },
-    { label: "Contact", href: "#contact" },
+    { label: "Courses", href: "/courses" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -249,7 +249,7 @@ export default function Navbar() {
           <Link href="/" className="nav-logo">
             <div className="logo-emblem">Σ</div>
             <div className="logo-text">
-              <span className="logo-name">SSHE</span>
+              <span className="logo-name">Atlas</span>
               <span className="logo-tagline">Est. 2026 · Excellence</span>
             </div>
           </Link>

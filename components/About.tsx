@@ -1,15 +1,15 @@
 export default function About() {
   const pillars = [
-    { icon: "🎓", title: "Academic Rigor", desc: "Cutting-edge curriculum designed with industry and academic leaders." },
-    { icon: "🔬", title: "Research Focus", desc: "₹50Cr+ annual research funding across 12 dedicated research centres." },
-    { icon: "🌐", title: "Global Network", desc: "Alumni in 60+ countries and partnerships with top global universities." },
-    { icon: "💡", title: "Innovation Hub", desc: "Startup incubator with 80+ ventures launched in the last decade." },
+    { icon: "🛡️", title: "Cybersecurity Focus", desc: "Specialised major combining business strategy with hands-on cybersecurity skills for a digital-first economy." },
+    { icon: "💼", title: "Work-Ready Graduates", desc: "Curriculum designed to produce professionals ready for roles from day one — not just theory, but practical skills." },
+    { icon: "🌐", title: "Industry Alignment", desc: "Responding to growing market demand for professionals who can protect organisations in an interconnected world." },
+    { icon: "💡", title: "Innovation & AI", desc: "Electives in AI, Machine Learning, Cloud Computing and Blockchain keep graduates ahead of emerging technologies." },
   ];
 
   const highlights = [
-    { icon: "🏛️", title: "Heritage Campus", desc: "36-acre lush green campus in the heart of the city" },
-    { icon: "👨‍🏫", title: "Distinguished Faculty", desc: "800+ faculty including 400+ PhDs from top universities" },
-    { icon: "🎯", title: "Outcome-Based Learning", desc: "Curriculum mapped to real-world skills and career outcomes" },
+    { icon: "📍", title: "Petersham Campus", desc: "Level 4/590 Parramatta Rd, Petersham NSW 2049 — central and accessible" },
+    { icon: "🎓", title: "AQF Level 7 Degree", desc: "Fully accredited Bachelor of Business — recognised across Australia and internationally" },
+    { icon: "🎯", title: "Outcome-Based Learning", desc: "9 Graduate Attributes mapped to real-world skills, ethics, and career outcomes" },
   ];
 
   return (
@@ -74,18 +74,25 @@ export default function About() {
           {/* Left column */}
           <div>
             <div className="section-label-line text-[11px] tracking-[3px] uppercase text-[#b8922a] font-bold mb-4 inline-flex items-center">
-              Our Story
+              About AIE
             </div>
 
             <h2 className="font-serif text-[clamp(32px,3.5vw,52px)] font-bold text-slate-900 leading-[1.12] mb-5">
-              Built on <span className="text-[#b8922a]">Tradition</span>,<br />
-              Driven by Innovation
+              Built for the <span className="text-[#b8922a]">Future of Work</span>,<br />
+              Grounded in Business
             </h2>
 
+            <p className="text-slate-500 text-base leading-[1.8] mb-4">
+              The <strong className="text-slate-700">Atlas Institute of Education (AIE)</strong> seeks
+              to produce students with the knowledge, competencies and values necessary to develop
+              critical, analytical and evaluative skills essential for a fulfilling career in business.
+            </p>
+
             <p className="text-slate-500 text-base leading-[1.8] mb-8">
-              Founded in 1985, SSHE has stood as a beacon of higher learning in the region.
-              Our commitment to transformative education blends classical values with contemporary
-              academic excellence.
+              Our <strong className="text-slate-700">Bachelor of Business (Major in Cybersecurity)</strong> is
+              designed to prepare students for the growing demand for professionals who can protect
+              organisations in an increasingly digital and interconnected world — combining core
+              business foundations with specialised cybersecurity expertise.
             </p>
 
             {/* Highlights */}
@@ -106,10 +113,10 @@ export default function About() {
             </div>
 
             <a
-              href="#"
+              href="/about"
               className="about-cta-link inline-flex items-center gap-2.5 px-7 py-3 border-2 border-amber-400 rounded-full text-[#b8922a] text-[14px] font-semibold no-underline"
             >
-              Discover Our History →
+              Discover AIE →
             </a>
           </div>
 

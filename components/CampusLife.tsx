@@ -121,7 +121,7 @@ const testimonials = [
     batch: "B.Tech CSE, 2021",
     avatar: "PS",
     quote:
-      "SSHE didn't just teach me to code — it taught me to think. The faculty and labs here gave me an edge that I felt on day one at Google.",
+      "Atlas didn't just teach me to code — it taught me to think. The faculty and labs here gave me an edge that I felt on day one at Google.",
     color: "#2563eb",
   },
   {
@@ -412,7 +412,7 @@ export function AdmissionsCTA() {
       <section className="admissions-cta" id="admissions">
         <div className="cta-inner">
           <h2 className="cta-title">
-            Begin Your Journey<br />at <span>SSHE</span>
+            Begin Your Journey<br />at <span>Atlas</span>
           </h2>
           <p className="cta-desc">
             Applications for the 2025–26 academic year are now open.

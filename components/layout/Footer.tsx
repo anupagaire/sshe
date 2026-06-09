@@ -193,15 +193,15 @@ export default function Footer() {
             <div className="footer-brand">
               <a href="/" className="footer-logo">
                 <div className="footer-emblem">Σ</div>
-                <span className="footer-name">SSHE</span>
+                <span className="footer-name">Atlas</span>
               </a>
               <p className="footer-desc">
-                Shaping minds, building futures. SSHE is committed to transformative
+                Shaping minds, building futures. Atlas is committed to transformative
                 education and research excellence since 1985.
               </p>
               <div className="footer-contact-item">📍 <span>586-590 Parramatta Road, Petersham, NSW 2049</span></div>
               <div className="footer-contact-item">📞 <a href="tel:+61298765432">+61 2 9876 5432</a></div>
-              <div className="footer-contact-item">✉️ <a href="mailto:admissions@sshe.edu">admissions@sshe.edu</a></div>
+              <div className="footer-contact-item">✉️ <a href="mailto:admissions@Atlas.edu">admissions@Atlas.edu</a></div>
               <div className="social-links">
                 {["𝕏", "in", "f", "▶", "📷"].map((s, i) => (
                   <a key={i} href="#" className="social-link">{s}</a>
@@ -225,7 +225,7 @@ export default function Footer() {
 
           <div className="footer-bottom">
             <p className="footer-copy">
-              © 2025 SSHE. All rights reserved. Designed with <span>♥</span> for knowledge.
+              © 2025 Atlas. All rights reserved. Designed with <span>♥</span> for knowledge.
             </p>
             <ul className="footer-legal">
               <li><a href="#">Privacy Policy</a></li>

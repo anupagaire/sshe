@@ -171,7 +171,7 @@ export default function Hero() {
               style={{ fontSize: "clamp(42px, 5vw, 72px)", color: "#ffffff" }}
             >
               Shape Your Future at{" "}
-              <span className="title-accent">SSHE</span>
+              <span className="title-accent">Atlas</span>
             </h1>
 
             {/* Description */}
