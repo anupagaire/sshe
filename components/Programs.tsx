@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 
-// ─── REAL DATA FROM AIE COURSE PROPOSAL (MAJ2603-CBS) ────────────────────────
 const categories = ["All", "Common Core", "Cybersecurity", "Electives"];
 
 const programs = [

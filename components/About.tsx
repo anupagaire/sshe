@@ -68,7 +68,7 @@ export default function About() {
         }
       `}</style>
 
-      <section id="about" className="about-section relative bg-amber-50 py-24 px-8 overflow-hidden">
+      <section id="about" className="about-section relative bg-amber-50 py-4 px-8 overflow-hidden">
         <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
           {/* Left column */}

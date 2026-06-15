@@ -29,7 +29,7 @@ export default function AboutPage() {
 
         .page-hero {
           background: linear-gradient(135deg, #040810 0%, #0a1540 60%, #040810 100%);
-          padding: 140px 2rem 90px;
+          padding: 10px 2rem 90px;
           border-bottom: 1px solid rgba(212,175,55,0.12);
           position: relative;
           overflow: hidden;
