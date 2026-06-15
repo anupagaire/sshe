@@ -224,37 +224,7 @@ export default function Hero() {
             >
               {/* Stats grid */}
               <div className="grid grid-cols-2 gap-5 mb-7">
-                {stats.map((s) => (
-                  <div
-                    key={s.label}
-                    className="text-center px-4 py-5 rounded-2xl transition-all duration-250 hover:-translate-y-0.5"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(212,175,55,0.12)",
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.background = "rgba(212,175,55,0.06)";
-                      (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(212,175,55,0.3)";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.04)";
-                      (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(212,175,55,0.12)";
-                    }}
-                  >
-                    <div
-                      className="font-serif font-bold text-[28px] leading-none mb-1.5"
-                      style={{ color: "#d4af37" }}
-                    >
-                      {s.number}
-                    </div>
-                    <div
-                      className="text-[11.5px] tracking-wide"
-                      style={{ color: "rgba(255,255,255,0.5)", fontFamily: "sans-serif" }}
-                    >
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
+                
               </div>
 
               {/* Feature rows */}

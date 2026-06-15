@@ -1,7 +1,6 @@
 export default function Footer() {
   const links = {
     Academics: ["Undergraduate", "Postgraduate", "PhD Programs", "Online Courses", "Academic Calendar"],
-    Admissions: ["How to Apply", "Scholarships", "Fee Structure", "Hostel Application", "FAQs"],
     Campus: ["Facilities", "Library", "Sports", "Health Centre", "Transport"],
     Connect: ["Contact Us", "Campus Map", "Career Portal", "Media Centre", "Alumni Network"],
   };
