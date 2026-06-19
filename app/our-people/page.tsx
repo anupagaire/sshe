@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-      import Image from "next/image";
+import Image from "next/image";
 
 interface TeamMember {
   name: string;
@@ -23,19 +23,19 @@ const teamData: TeamSection[] = [
         name: "Professor Dr. Greg Whitely",
         role: "Board Member",
         email: "",
-        image: "/images/team/greg-whitely.jpg"
+        image: "/team/Greg-Whateley-1.png"
       },
       {
         name: "Sir Gerald Newman",
         role: "Board Member",
         email: "",
-        image: "/images/team/gerald-newman.jpg"
+        image: "/team/gerard.jpeg"
       },
       {
         name: "Puna Bhandari",
         role: "Board Member",
         email: "",
-        image: "/images/team/puna-bhandari.jpg"
+        image: "/team/puna.jpeg"
       }
     ]
   },
@@ -46,19 +46,19 @@ const teamData: TeamSection[] = [
         name: "Sir Gerald Newman",
         role: "Academic Board Member",
         email: "",
-        image: "/images/team/gerald-newman.jpg"
+        image: "/team/gerard.jpeg"
       },
       {
         name: "Craig Ilis",
         role: "Academic Board Member",
         email: "",
-        image: "/images/team/craig-ilis.jpg"
+        image: "/team/craig-ilis.jpg"
       },
       {
         name: "Andy West",
         role: "Academic Board Member",
         email: "",
-        image: "/images/team/andy-west.jpg"
+        image: "/team/andy.jpeg"
       }
     ]
   },
@@ -69,31 +69,31 @@ const teamData: TeamSection[] = [
         name: "A/Prof Seedwell Sithole",
         role: "Chair",
         email: "Seedwell.sithole@avondale.edu.au",
-        image: "/images/team/seedwell-sithole.jpg"
+        image: "/team/seed.webp"
       },
       {
         name: "Prof. Lucia Carrion Gordon",
         role: "Dean & Co-Chair",
         email: "lucia@aahm.edu.au",
-        image: "/images/team/lucia-gordon.jpg"
+        image: "/team/lucia-gordon.jpg"
       },
       {
         name: "Mr. Mohammad Akbar",
         role: "Member",
         email: "akbar_uts@yahoo.com",
-        image: "/images/team/mohammad-akbar.jpg"
+        image: "/team/mohammad-akbar.jpg"
       },
       {
         name: "Dr. Ratan Ghosh",
         role: "Member",
         email: "ratanghosh18@gmail.com",
-        image: "/images/team/ratan-ghosh.jpg"
+        image: "/team/ratan-ghosh.jpg"
       },
       {
         name: "Dr. Sajal Roy",
         role: "Member",
         email: "roysajal.wgs@gmail.com",
-        image: "/images/team/sajal-roy.jpg"
+        image: "/team/sajal-roy.jpg"
       }
     ]
   }
