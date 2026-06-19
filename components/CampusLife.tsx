@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 
-// ─── REAL AIE DATA ─────────────────────────────────────────────────────────────
-
 const campusFeatures = [
   { icon: "🛡️", title: "Cyber Security Lab",     desc: "Hands-on lab environments simulating real-world threats, penetration testing, and incident response scenarios." },
   { icon: "💻", title: "Tech & IT Suites",        desc: "24/7 access to modern computing suites with industry-standard security tools and software licences." },
@@ -39,20 +37,15 @@ const testimonials = [
   },
 ];
 
-const deadlines = [
-  { label: "Term 1 Opens",   value: "January 2027" },
-  { label: "Term 2 Opens",   value: "May 2027" },
-  { label: "Term 3 Opens",   value: "September 2027" },
-];
 
 // ─── CAMPUS LIFE ───────────────────────────────────────────────────────────────
 export function CampusLife() {
   return (
-    <section id="campus" className="bg-slate-50 py-24 px-6">
-      <div className="max-w-[1300px] mx-auto">
+    <section id="campus" className=" py-4 px-6">
+      <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <p className="text-blue-600 font-bold text-[11px] tracking-[3px] uppercase mb-3">
             Campus Life
           </p>
@@ -60,7 +53,7 @@ export function CampusLife() {
             Beyond the <span className="text-blue-600">Classroom</span>
           </h2>
           <p className="text-slate-500 text-base max-w-[520px] mx-auto leading-relaxed">
-            Located in Petersham NSW, AIE's campus is equipped with everything you need
+            Located in Petersham NSW, AIE&apos;s campus is equipped with everything you need
             to learn, grow, and thrive in your studies.
           </p>
         </div>
@@ -125,7 +118,7 @@ export function StatsBanner() {
             Program Snapshot
           </p>
           <h2 className="font-serif text-[clamp(26px,3.5vw,44px)] font-bold text-white leading-tight">
-            The Numbers Behind <span className="text-blue-300">AIE's Cybersecurity Degree</span>
+            The Numbers Behind <span className="text-blue-300">AIE&apos;s Cybersecurity Degree</span>
           </h2>
         </div>
 
@@ -185,7 +178,7 @@ export function Testimonials() {
                 className="absolute top-5 right-7 font-serif text-[72px] leading-none opacity-10 select-none"
                 style={{ color: t.color }}
               >
-                "
+                &quot;
               </div>
 
               <p className="text-slate-600 text-[15px] leading-[1.85] italic mb-8 relative z-10">
@@ -270,30 +263,10 @@ export function AdmissionsCTA() {
           >
             Start Application →
           </a>
-          <a
-            href="/courses"
-            className="px-10 py-4 bg-white/15 border border-white/40 text-white font-semibold
-                       text-[15px] rounded-full hover:bg-white/25 hover:-translate-y-1
-                       transition-all duration-200 backdrop-blur-sm"
-          >
-            Download Prospectus
-          </a>
+          
         </div>
 
-        {/* Deadline chips */}
-        <div className="flex justify-center gap-4 flex-wrap">
-          {deadlines.map((d) => (
-            <div
-              key={d.label}
-              className="flex items-center gap-2 bg-white/15 backdrop-blur-sm
-                         border border-white/25 rounded-full px-5 py-2.5"
-            >
-              <span className="text-amber-200 text-[12px]">📅</span>
-              <span className="text-white/70 text-[12.5px]">{d.label}:</span>
-              <span className="text-white font-bold text-[12.5px]">{d.value}</span>
-            </div>
-          ))}
-        </div>
+       
 
       </div>
     </section>

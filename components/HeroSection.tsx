@@ -71,7 +71,7 @@ export default function Hero() {
           background:
             radial-gradient(ellipse 80% 60% at 60% 40%, rgba(16,28,80,0.9) 0%, transparent 70%),
             radial-gradient(ellipse 50% 50% at 20% 80%, rgba(212,175,55,0.08) 0%, transparent 60%),
-            url('https://images.unsplash.com/photo-1562774053-701939374585?w=1800&q=80') center/cover no-repeat;
+            url('/sydney.jpg') center/cover no-repeat;
         }
         .title-accent {
           background: linear-gradient(90deg, #d4af37, #f0d060, #d4af37);
@@ -88,13 +88,7 @@ export default function Hero() {
           height: 2px;
           background: linear-gradient(90deg, transparent, #d4af37, transparent);
         }
-        .badge-dot {
-          width: 7px;
-          height: 7px;
-          background: #d4af37;
-          border-radius: 50%;
-          animation: pulse 2s infinite;
-        }
+        
         @keyframes pulse {
           0%, 100% { opacity: 1; transform: scale(1); }
           50% { opacity: 0.5; transform: scale(1.3); }
@@ -149,21 +143,7 @@ export default function Hero() {
           {/* Left */}
           <div>
             {/* Badge */}
-            <div
-              className="anim-1 inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 border"
-              style={{
-                background: "rgba(212,175,55,0.12)",
-                borderColor: "rgba(212,175,55,0.35)",
-              }}
-            >
-              <span className="badge-dot" />
-              <span
-                className="text-xs font-semibold tracking-widest uppercase"
-                style={{ color: "#d4af37", fontFamily: "sans-serif" }}
-              >
-                Admissions Open 2026
-              </span>
-            </div>
+            
 
             {/* Title */}
             <h1
@@ -195,7 +175,7 @@ export default function Hero() {
                   fontFamily: "sans-serif",
                 }}
               >
-                Apply for 2026 →
+                Apply Today
               </a>
               <a
                 href="#programs"
@@ -212,42 +192,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — hidden on mobile */}
-          <div className="anim-5 hidden md:block">
-            <div
-              className="card-top-line relative rounded-[24px] p-8"
-              style={{
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(20px)",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-            >
-              {/* Stats grid */}
-              <div className="grid grid-cols-2 gap-5 mb-7">
-                
-              </div>
-
-              {/* Feature rows */}
-              {features.map((f) => (
-                <div
-                  key={f.text}
-                  className="flex items-center gap-3 px-4 py-3.5 rounded-xl mb-3"
-                  style={{
-                    background: "rgba(212,175,55,0.06)",
-                    border: "1px solid rgba(212,175,55,0.15)",
-                  }}
-                >
-                  <span className="text-[20px] flex-shrink-0">{f.icon}</span>
-                  <span
-                    className="text-[13.5px]"
-                    style={{ color: "rgba(255,255,255,0.8)", fontFamily: "sans-serif" }}
-                  >
-                    {f.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
 
         {/* Scroll hint */}

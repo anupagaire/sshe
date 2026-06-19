@@ -230,7 +230,7 @@ export default function FacilitiesPage() {
                 Nearby Attractions
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Neighbouring the atlas campus, students can dive into the plethora of facilities around Parramatta, including parks, riverside bike-hire, theatre, markets, ferries, buses, and trains to explore the rest of Sydney, and the abundance of retail and restaurants, all just few minutes' walk from campus.
+                Neighbouring the atlas campus, students can dive into the plethora of facilities around Parramatta, including parks, riverside bike-hire, theatre, markets, ferries, buses, and trains to explore the rest of Sydney, and the abundance of retail and restaurants, all just few minutes&apos; walk from campus.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
                 {["🌳 Parks", "🚲 Bike Hire", "🎭 Theatre", "🛍️ Markets", "⛴️ Ferries", "🚌 Buses", "🚆 Trains", "🍽️ Restaurants"].map((item) => (

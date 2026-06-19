@@ -120,7 +120,7 @@ export default function OurPeoplePage() {
     <div className="min-h-screen" style={{ background: '#f8fafc' }}>
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-28 lg:py-36"
+      <section className="relative overflow-hidden py-38 lg:py-36"
         style={{ background: 'linear-gradient(135deg, #0f172a 0%, #0a97b0 100%)' }}>
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)', backgroundSize: '60px 60px' }} />

@@ -17,10 +17,7 @@ export default function Navbar() {
 
   // Top bar links
   const topBarLinks = [
-    { label: "myatlas", href: "/myatlas" },
     { label: "Student Admin Portal", href: "/portal" },
-    { label: "Agents", href: "/agents" },
-    { label: "Health and Safety", href: "/health-safety" },
     { label: "Blog", href: "/blog" },
     { label: "Contact Us", href: "/contact" },
   ];
