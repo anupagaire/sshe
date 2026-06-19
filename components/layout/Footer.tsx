@@ -98,7 +98,7 @@ export default function Footer() {
           </div>
           <p className="text-xs text-gray-500 leading-relaxed text-center md:text-left">
             Atlas Institute of Education is registered by the Tertiary Education Quality and Standards Agency (TEQSA) 
-            and delivers courses under the Australian Qualifications Framework (AQF). Provider Code: 12345
+            and delivers courses under the Australian Qualifications Framework (AQF). Provider Code: *****
           </p>
         </div>
 
