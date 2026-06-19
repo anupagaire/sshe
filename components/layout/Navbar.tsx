@@ -17,7 +17,7 @@ export default function Navbar() {
 
   // Top bar links
   const topBarLinks = [
-    { label: "myAstra", href: "/myastra" },
+    { label: "myatlas", href: "/myatlas" },
     { label: "Student Admin Portal", href: "/portal" },
     { label: "Agents", href: "/agents" },
     { label: "Health and Safety", href: "/health-safety" },
@@ -36,8 +36,23 @@ export default function Navbar() {
         
       ]
     },
-    { label: "Current Students", href: "/current-students" },
-    { label: "Future Students", href: "/future-students" },
+    { label: "Current Students", href: "/current-students",
+       children: [
+        { label: "Student Information", href: "/current-students/student-information" },
+        { label: "Moodle", href: "https://moodle.org/" },
+         { label: "On-Campus Facilities", href: "/current-students/facilities"},
+                  { label: "Library", href: "/current-students/library"},
+
+        
+      ]
+     },
+    { label: "Future Students", href: "/future-students",
+       children: [
+                { label: "Fees", href: "/future-students/fees" },
+
+        
+      ]
+     },
     { label: "Our People", href: "/our-people" },
   ];
 
@@ -72,7 +87,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center no-underline">
               <Image
                 src="/logo.png"
-                alt="ASTRA Institute"
+                alt="atlas Institute"
                 width={scrolled ? 160 : 180}
                 height={scrolled ? 50 : 60}
                 priority

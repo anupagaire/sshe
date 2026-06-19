@@ -1,20 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   const links = {
-    Academics: ["Undergraduate", "Postgraduate", "PhD Programs", "Online Courses", "Academic Calendar"],
     Campus: ["Facilities", "Library", "Sports", "Health Centre", "Transport"],
-    Connect: ["Contact Us", "Campus Map", "Career Portal", "Media Centre", "Alumni Network"],
+    Connect: ["Contact Us", "Campus Map"],
   };
 
   return (
     <footer className="bg-white border-t border-gray-200" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-12 border-b border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-gray-200">
           
           {/* Brand Column */}
           <div className="lg:col-span-2">
