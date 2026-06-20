@@ -93,11 +93,11 @@ export default function Footer() {
 
         {/* Accreditation Banner */}
         <div className="flex flex-col md:flex-row items-center gap-5 mt-8 mb-10 p-5 bg-gray-50 border border-gray-200 rounded-xl">
-          <div className="px-4 py-1.5 bg-[#0a97b0]/10 border border-[#0a97b0]/25 rounded-lg text-xs font-bold text-[#0a97b0] whitespace-nowrap">
+          {/* <div className="px-4 py-1.5 bg-[#0a97b0]/10 border border-[#0a97b0]/25 rounded-lg text-xs font-bold text-[#0a97b0] whitespace-nowrap">
             TEQSA Accredited
-          </div>
+          </div> */}
           <p className="text-xs text-gray-500 leading-relaxed text-center md:text-left">
-            Atlas Institute of Education is registered by the Tertiary Education Quality and Standards Agency (TEQSA) 
+            Atlas Institute of Education is on progress by the Tertiary Education Quality and Standards Agency (TEQSA) 
             and delivers courses under the Australian Qualifications Framework (AQF). Provider Code: *****
           </p>
         </div>
