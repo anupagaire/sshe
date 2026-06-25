@@ -87,14 +87,7 @@ const teamData: TeamSection[] = [
         bio: "Professor Dr. Lucia Carrion Gordon is an accomplished researcher and lecturer with distinguished academic credentials and advanced technological expertise. She is committed to fostering innovative ideas and solutions, with proven expertise in data analysis and diverse research methodologies. Known for her integrity and adaptability, she excels in culturally diverse environments and has a strong track record in stakeholder engagement and academic leadership.",
         qualifications: ["Prof. Dr² — Dual Doctorate", "Expert in Data Analysis & Research Methodologies", "Alumni, University of Technology Sydney"],
       },
-      {
-        name: "Mr. Mohammad Akbar",
-        role: "Member",
-        email: "akbar_uts@yahoo.com",
-        image: "/team/mohammad.jpeg",
-        bio: "Mohammad Akbar is an energetic and results-focused business development manager and educator with extensive experience working with RTOs across Sydney, Newcastle, and Wollongong. He is an advanced user of accounting software including XERO, MYOB, and QuickBooks, and is experienced in developing, validating, and moderating assessment tools and learning resources. He is dedicated to building professional skills in the future workforce.",
-        qualifications: ["Advanced: XERO, MYOB, QuickBooks", "RTO Experience — Sydney, Newcastle, Wollongong", "Curriculum Development & Assessment Expert"],
-      },
+     
       {
         name: "Dr. Ratan Ghosh",
         role: "Member",
