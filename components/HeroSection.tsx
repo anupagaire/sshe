@@ -142,12 +142,12 @@ export default function Hero() {
 
           {/* Left */}
           <div>
-            {/* Badge */}
+           
             
 
             {/* Title */}
             <h1
-              className="anim-2 font-serif font-bold leading-[1.08] mb-6"
+              className="anim-2 font-serif font-bold leading-[1.08] mb-6 py-8"
               style={{ fontSize: "clamp(42px, 5vw, 72px)", color: "#ffffff" }}
             >
               Shape Your Future at{" "}
@@ -159,8 +159,7 @@ export default function Hero() {
               className="anim-3 text-[17px] leading-[1.75] mb-10 max-w-[500px]"
               style={{ color: "rgba(255,255,255,0.65)", fontFamily: "sans-serif" }}
             >
-              A century of academic excellence, world-class faculty, and a vibrant campus community.
-              Join thousands of students who chose to begin their journey here.
+              Combine core business knowledge with specialised cybersecurity skills. Develop competencies in risk management, digital forensics, network security, and governance frameworks — and graduate ready for the roles the industry needs most.
             </p>
 
             {/* Actions */}

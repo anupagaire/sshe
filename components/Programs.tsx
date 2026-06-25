@@ -1,335 +1,275 @@
 "use client";
 import { useState } from "react";
 
+const programs = [
+  { code: "BUS101", title: "Business Communication",         dept: "Common Core",   trim: "Tri 1", icon: "💬" },
+  { code: "BUS102", title: "Introduction to Marketing",      dept: "Common Core",   trim: "Tri 1", icon: "📣" },
+  { code: "BUS103", title: "Financial Literacy",             dept: "Common Core",   trim: "Tri 1", icon: "💰" },
+  { code: "BUS104", title: "Business Economics",             dept: "Common Core",   trim: "Tri 1", icon: "📈" },
+  { code: "BUS105", title: "Introduction to Management",     dept: "Common Core",   trim: "Tri 2", icon: "🏢" },
+  { code: "BUS106", title: "Organisational Behaviour",       dept: "Common Core",   trim: "Tri 2", icon: "🧩" },
+  { code: "BUS107", title: "Accounting for Decision Making", dept: "Common Core",   trim: "Tri 2", icon: "🧾" },
+  { code: "BUS108", title: "Business Law",                   dept: "Common Core",   trim: "Tri 2", icon: "⚖️" },
+  { code: "CBS201", title: "Foundation of Cybersecurity",                  dept: "Cybersecurity", trim: "Tri 3", icon: "🛡️", tag: "Core" },
+  { code: "CBS202", title: "Network Security and Infrastructure",           dept: "Cybersecurity", trim: "Tri 3", icon: "🌐", tag: "Core" },
+  { code: "CBS203", title: "Cyber Risk Management",                        dept: "Cybersecurity", trim: "Tri 4", icon: "⚠️", tag: "Core" },
+  { code: "CBS204", title: "Digital Forensics and Incident Response",      dept: "Cybersecurity", trim: "Tri 4", icon: "🔍", tag: "Core" },
+  { code: "CBS301", title: "Cybersecurity Governance and Compliance",      dept: "Cybersecurity", trim: "Tri 5", icon: "📋", tag: "Core" },
+  { code: "CBS302", title: "Ethical Hacking and Vulnerability Assessment", dept: "Cybersecurity", trim: "Tri 5", icon: "💻", tag: "Core" },
+  { code: "CBS303", title: "Cloud Security Strategy and Leadership",       dept: "Cybersecurity", trim: "Tri 5", icon: "☁️", tag: "Core" },
+  { code: "CBS304", title: "Cybersecurity Project (Capstone)",             dept: "Cybersecurity", trim: "Tri 6", icon: "🏆", tag: "Capstone" },
+  { code: "INF205", title: "Cloud Computing for Business",                 dept: "Electives",     trim: "Elective", icon: "☁️" },
+  { code: "INF305", title: "Artificial Intelligence & Machine Learning",   dept: "Electives",     trim: "Elective", icon: "🤖", tag: "New" },
+  { code: "CBS205", title: "Artificial Intelligence for Cybersecurity",    dept: "Electives",     trim: "Elective", icon: "🧠", tag: "New" },
+  { code: "CBS305", title: "Blockchain and Distributed Security Systems",  dept: "Electives",     trim: "Elective", icon: "🔗" },
+  { code: "HTM205", title: "Digital Marketing & Social Media Strategy",    dept: "Electives",     trim: "Elective", icon: "📱" },
+  { code: "HTM305", title: "Customer Experiences and Services",            dept: "Electives",     trim: "Elective", icon: "🤝" },
+];
+
 const categories = ["All", "Common Core", "Cybersecurity", "Electives"];
 
-const programs = [
-  // Common Core — Year 1
-  { code: "BUS101", title: "Business Communication",         dept: "Common Core",   duration: "Trimester 1", icon: "💬", tag: "" },
-  { code: "BUS102", title: "Introduction to Marketing",      dept: "Common Core",   duration: "Trimester 1", icon: "📣", tag: "" },
-  { code: "BUS103", title: "Financial Literacy",             dept: "Common Core",   duration: "Trimester 1", icon: "💰", tag: "" },
-  { code: "BUS104", title: "Business Economics",             dept: "Common Core",   duration: "Trimester 1", icon: "📈", tag: "" },
-  { code: "BUS105", title: "Introduction to Management",     dept: "Common Core",   duration: "Trimester 2", icon: "🏢", tag: "" },
-  { code: "BUS106", title: "Organisational Behaviour",       dept: "Common Core",   duration: "Trimester 2", icon: "🧩", tag: "" },
-  { code: "BUS107", title: "Accounting for Decision Making", dept: "Common Core",   duration: "Trimester 2", icon: "🧾", tag: "" },
-  { code: "BUS108", title: "Business Law",                   dept: "Common Core",   duration: "Trimester 2", icon: "⚖️", tag: "" },
-  // Cybersecurity Major
-  { code: "CBS201", title: "Foundation of Cybersecurity",                  dept: "Cybersecurity", duration: "Trimester 3", icon: "🛡️", tag: "Core" },
-  { code: "CBS202", title: "Network Security and Infrastructure",           dept: "Cybersecurity", duration: "Trimester 3", icon: "🌐", tag: "Core" },
-  { code: "CBS203", title: "Cyber Risk Management",                        dept: "Cybersecurity", duration: "Trimester 4", icon: "⚠️", tag: "Core" },
-  { code: "CBS204", title: "Digital Forensics and Incident Report",        dept: "Cybersecurity", duration: "Trimester 4", icon: "🔍", tag: "Core" },
-  { code: "CBS301", title: "Cybersecurity Governance and Compliance",      dept: "Cybersecurity", duration: "Trimester 5", icon: "📋", tag: "Core" },
-  { code: "CBS302", title: "Ethical Hacking and Vulnerability Assessment", dept: "Cybersecurity", duration: "Trimester 5", icon: "💻", tag: "Core" },
-  { code: "CBS303", title: "Cloud Security Strategy and Leadership",       dept: "Cybersecurity", duration: "Trimester 5", icon: "☁️", tag: "Core" },
-  { code: "CBS304", title: "Cybersecurity Project (Capstone)",             dept: "Cybersecurity", duration: "Trimester 6", icon: "🏆", tag: "Capstone" },
-  // Electives
-  { code: "INF205", title: "Cloud Computing for Business",                              dept: "Electives", duration: "Elective", icon: "☁️", tag: "" },
-  { code: "INF305", title: "Artificial Intelligence and Machine Learning",              dept: "Electives", duration: "Elective", icon: "🤖", tag: "New" },
-  { code: "HTM205", title: "Digital Marketing & Social Media Strategy",                dept: "Electives", duration: "Elective", icon: "📱", tag: "" },
-  { code: "HTM305", title: "Customer Experiences and Services",                        dept: "Electives", duration: "Elective", icon: "🤝", tag: "" },
-  { code: "CBS205", title: "Artificial Intelligence for Cybersecurity",                dept: "Electives", duration: "Elective", icon: "🧠", tag: "New" },
-  { code: "CBS305", title: "Blockchain and Distributed Security Systems",              dept: "Electives", duration: "Elective", icon: "🔗", tag: "" },
+// Show only 6 cards on homepage — enough to entice, not overwhelm
+const PREVIEW_COUNT = 6;
+const PREVIEW_PICK = [
+  "CBS201","CBS202","CBS302","CBS304","INF305","CBS205"
 ];
 
 export default function Programs() {
   const [active, setActive] = useState("All");
-
   const filtered = active === "All" ? programs : programs.filter((p) => p.dept === active);
 
   return (
     <>
       <style>{`
-        .programs-section {
-          position: relative;
+        .prog-section {
           background: #eff6ff;
-          padding: 96px 2rem;
+          padding: 80px 2rem 64px;
+          position: relative;
           overflow: hidden;
         }
-        .programs-section::before {
-          content: '';
-          position: absolute;
-          right: -100px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 500px;
-          height: 500px;
-          background: radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 70%);
-          pointer-events: none;
+        .prog-section::before {
+          content:'';
+          position:absolute;
+          right:-80px; top:50%;
+          transform:translateY(-50%);
+          width:420px; height:420px;
+          background:radial-gradient(circle,rgba(59,130,246,0.07) 0%,transparent 70%);
+          pointer-events:none;
         }
-        .prog-inner { max-width: 1300px; margin: 0 auto; }
+        .prog-inner { max-width:1200px; margin:0 auto; }
 
-        /* Header */
-        .prog-label {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          font-size: 11px;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-          color: #1d4ed8;
-          font-weight: 700;
-          margin-bottom: 14px;
+        /* ── HEADER ── */
+        .prog-header { text-align:center; margin-bottom:36px; }
+        .prog-eyebrow {
+          display:inline-flex; align-items:center; gap:8px;
+          font-size:11px; letter-spacing:3px; text-transform:uppercase;
+          color:#1d4ed8; font-weight:700; margin-bottom:12px;
+          font-family:sans-serif;
         }
-        .prog-title {
-          font-family: Georgia, serif;
-          font-size: clamp(28px, 3.5vw, 48px);
-          font-weight: 700;
-          color: #0f172a;
-          line-height: 1.12;
-          margin-bottom: 14px;
+        .prog-h2 {
+          font-family:Georgia,serif;
+          font-size:clamp(26px,3vw,42px);
+          font-weight:700; color:#0f172a; line-height:1.12; margin-bottom:10px;
         }
-        .prog-title span { color: #2563eb; }
+        .prog-h2 span { color:#2563eb; }
         .prog-sub {
-          color: #64748b;
-          font-size: 16px;
-          max-width: 520px;
-          margin: 0 auto;
-          line-height: 1.7;
-          font-family: sans-serif;
+          color:#64748b; font-size:15px; max-width:480px;
+          margin:0 auto; line-height:1.7; font-family:sans-serif;
         }
 
-        /* Filters */
-        .filter-tabs {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin-bottom: 48px;
+        /* ── STAT STRIP ── */
+        .stat-strip {
+          display:flex; justify-content:center; flex-wrap:wrap;
+          gap:0; margin-bottom:40px;
+          background:#fff; border:1px solid #e2e8f0;
+          border-radius:16px; overflow:hidden;
         }
-        .filter-tab-btn {
-          padding: 8px 22px;
-          border-radius: 50px;
-          border: 1.5px solid #e2e8f0;
-          background: #fff;
-          color: #64748b;
-          font-size: 13.5px;
-          font-weight: 500;
-          font-family: sans-serif;
-          cursor: pointer;
-          transition: all 0.2s;
+        .stat-strip-item {
+          flex:1; min-width:120px; text-align:center;
+          padding:18px 20px;
+          border-right:1px solid #e2e8f0;
         }
-        .filter-tab-btn:hover {
-          border-color: rgba(59,130,246,0.5);
-          color: #1d4ed8;
+        .stat-strip-item:last-child { border-right:none; }
+        .stat-num {
+          font-family:Georgia,serif; font-size:26px;
+          font-weight:700; color:#1d4ed8; line-height:1; margin-bottom:3px;
         }
-        .filter-tab-btn.active {
-          background: #dbeafe;
-          border-color: #93c5fd;
-          color: #1d4ed8;
-          font-weight: 700;
-        }
+        .stat-lbl { font-size:11px; color:#94a3b8; letter-spacing:1px; text-transform:uppercase; font-family:sans-serif; }
 
-        /* Grid */
+        /* ── TABS ── */
+        .tabs {
+          display:flex; justify-content:center; flex-wrap:wrap;
+          gap:8px; margin-bottom:36px;
+        }
+        .tab-btn {
+          padding:7px 20px; border-radius:50px;
+          border:1.5px solid #e2e8f0; background:#fff;
+          color:#64748b; font-size:13px; font-weight:500;
+          font-family:sans-serif; cursor:pointer; transition:all 0.2s;
+        }
+        .tab-btn:hover { border-color:#93c5fd; color:#1d4ed8; }
+        .tab-btn.on { background:#dbeafe; border-color:#93c5fd; color:#1d4ed8; font-weight:700; }
+
+        /* ── GRID ── */
         .prog-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 20px;
+          display:grid;
+          grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+          gap:16px;
+          margin-bottom:36px;
         }
 
-        /* Card */
-        .program-card {
-          background: #fff;
-          border: 1.5px solid #e2e8f0;
-          border-radius: 20px;
-          padding: 28px;
-          cursor: pointer;
-          transition: all 0.3s;
-          position: relative;
-          overflow: hidden;
+        /* ── CARD ── */
+        .prog-card {
+          background:#fff; border:1.5px solid #e2e8f0;
+          border-radius:18px; padding:22px;
+          transition:all 0.25s; position:relative; overflow:hidden;
+          cursor:default;
         }
-        .program-card::after {
-          content: '';
-          position: absolute;
-          bottom: 0; left: 0; right: 0;
-          height: 3px;
-          background: linear-gradient(90deg, #2563eb, #60a5fa);
-          transform: scaleX(0);
-          transition: transform 0.3s;
-          transform-origin: left;
+        .prog-card::after {
+          content:''; position:absolute;
+          bottom:0; left:0; right:0; height:3px;
+          background:linear-gradient(90deg,#2563eb,#60a5fa);
+          transform:scaleX(0); transition:transform 0.3s;
+          transform-origin:left;
         }
-        .program-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 20px 60px rgba(59,130,246,0.12);
-          border-color: #93c5fd;
-          background: #f8fbff;
+        .prog-card:hover {
+          transform:translateY(-4px);
+          box-shadow:0 16px 48px rgba(59,130,246,0.11);
+          border-color:#93c5fd; background:#f8fbff;
         }
-        .program-card:hover::after { transform: scaleX(1); }
+        .prog-card:hover::after { transform:scaleX(1); }
 
-        .card-top {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          margin-bottom: 16px;
-        }
+        .card-top { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:14px; }
         .card-icon {
-          width: 52px; height: 52px;
-          background: #eff6ff;
-          border: 1px solid #bfdbfe;
-          border-radius: 14px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 24px;
+          width:46px; height:46px; background:#eff6ff;
+          border:1px solid #bfdbfe; border-radius:12px;
+          display:flex; align-items:center; justify-content:center; font-size:22px;
         }
-        .card-tag {
-          padding: 4px 12px;
-          border-radius: 20px;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.5px;
-          text-transform: uppercase;
-          font-family: sans-serif;
+        .ctag {
+          padding:3px 10px; border-radius:20px;
+          font-size:10px; font-weight:700; letter-spacing:0.5px;
+          text-transform:uppercase; font-family:sans-serif;
         }
-        .tag-core     { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
-        .tag-capstone { background: #fefce8; color: #92400e; border: 1px solid #fde68a; }
-        .tag-new      { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+        .ctag-core     { background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; }
+        .ctag-capstone { background:#fefce8; color:#92400e; border:1px solid #fde68a; }
+        .ctag-new      { background:#f0fdf4; color:#166534; border:1px solid #86efac; }
 
         .card-code {
-          font-size: 11.5px;
-          color: #2563eb;
-          text-transform: uppercase;
-          letter-spacing: 1.2px;
-          font-weight: 700;
-          font-family: monospace;
-          margin-bottom: 4px;
+          font-size:11px; color:#2563eb; letter-spacing:1.2px;
+          font-weight:700; font-family:monospace; margin-bottom:3px; text-transform:uppercase;
         }
         .card-title {
-          font-family: Georgia, serif;
-          font-size: 16.5px;
-          color: #0f172a;
-          font-weight: 700;
-          line-height: 1.3;
-          margin-bottom: 16px;
+          font-family:Georgia,serif; font-size:15.5px;
+          color:#0f172a; font-weight:700; line-height:1.3; margin-bottom:14px;
         }
-        .card-meta {
-          display: flex;
-          gap: 16px;
-          padding-top: 14px;
-          border-top: 1px solid #f1f5f9;
+        .card-foot {
+          display:flex; gap:12px; padding-top:12px;
+          border-top:1px solid #f1f5f9;
         }
-        .card-meta-item {
-          font-size: 12.5px;
-          color: #94a3b8;
-          font-family: sans-serif;
-          display: flex;
-          align-items: center;
-          gap: 5px;
+        .card-chip {
+          font-size:11.5px; color:#94a3b8; font-family:sans-serif;
+          display:flex; align-items:center; gap:4px;
         }
-        .card-meta-item span { color: #475569; font-weight: 600; }
+        .card-chip b { color:#475569; }
 
-        /* Bottom CTA */
-        .prog-bottom { text-align: center; margin-top: 48px; }
-        .view-all-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 13px 36px;
-          border-radius: 50px;
-          border: 2px solid #3b82f6;
-          color: #2563eb;
-          text-decoration: none;
-          font-size: 14px;
-          font-weight: 600;
-          font-family: sans-serif;
-          transition: all 0.2s;
-          background: transparent;
+        /* ── FOOTER ROW ── */
+        .prog-footer {
+          display:flex; align-items:center; justify-content:space-between;
+          flex-wrap:wrap; gap:16px;
+          background:#fff; border:1px solid #e2e8f0; border-radius:16px;
+          padding:20px 28px;
         }
-        .view-all-btn:hover {
-          background: #2563eb;
-          color: #fff;
+        .prog-footer-left { font-size:14px; color:#475569; font-family:sans-serif; }
+        .prog-footer-left strong { color:#0f172a; }
+        .view-btn {
+          display:inline-flex; align-items:center; gap:8px;
+          padding:11px 28px; border-radius:50px;
+          border:2px solid #3b82f6; color:#2563eb;
+          text-decoration:none; font-size:13.5px; font-weight:600;
+          font-family:sans-serif; transition:all 0.2s; background:transparent;
         }
-
-        /* Stat bar */
-        .stat-bar {
-          display: flex;
-          justify-content: center;
-          gap: 48px;
-          flex-wrap: wrap;
-          margin-bottom: 56px;
-        }
-        .stat-bar-item { text-align: center; }
-        .stat-bar-num {
-          font-family: Georgia, serif;
-          font-size: 32px;
-          font-weight: 700;
-          color: #1d4ed8;
-          line-height: 1;
-          margin-bottom: 4px;
-        }
-        .stat-bar-lbl { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
+        .view-btn:hover { background:#2563eb; color:#fff; }
       `}</style>
 
-      <section className="programs-section" id="programs">
+      <section className="prog-section" id="programs">
         <div className="prog-inner">
 
           {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div className="prog-label">📚 Academics — MAJ2603-CBS</div>
-            <h2 className="prog-title">
-              Bachelor of Business —<br /><span>Major in Cybersecurity</span>
+          <div className="prog-header">
+            <div className="prog-eyebrow">📚 MAJ2603-CBS · AQF Level 7</div>
+            <h2 className="prog-h2">
+              Bachelor of Business<br />
+              <span>Major in Cybersecurity</span>
             </h2>
             <p className="prog-sub">
-              24 subjects across 6 trimesters. Build your career at the intersection
+              24 subjects · 6 trimesters · Build your career at the intersection
               of business strategy and digital security.
             </p>
           </div>
 
-          {/* Stat bar */}
-          <div className="stat-bar">
+          {/* Stat strip */}
+          <div className="stat-strip">
             {[
-              { num: "24", lbl: "Total Subjects" },
-              { num: "144", lbl: "Credit Points" },
-              { num: "3", lbl: "Intakes Per Year" },
-              { num: "AQF 7", lbl: "Qualification" },
-            ].map((s) => (
-              <div className="stat-bar-item" key={s.lbl}>
-                <div className="stat-bar-num">{s.num}</div>
-                <div className="stat-bar-lbl">{s.lbl}</div>
+              { num: "24",     lbl: "Total Subjects"   },
+              { num: "144",    lbl: "Credit Points"    },
+              { num: "3",      lbl: "Intakes / Year"   },
+              { num: "AQF 7",  lbl: "Qualification"    },
+              { num: "2027",   lbl: "First Intake"     },
+            ].map(s => (
+              <div className="stat-strip-item" key={s.lbl}>
+                <div className="stat-num">{s.num}</div>
+                <div className="stat-lbl">{s.lbl}</div>
               </div>
             ))}
           </div>
 
           {/* Filter tabs */}
-          <div className="filter-tabs">
-            {categories.map((c) => (
+          <div className="tabs">
+            {categories.map(c => (
               <button
                 key={c}
-                className={`filter-tab-btn ${active === c ? "active" : ""}`}
+                className={`tab-btn ${active === c ? "on" : ""}`}
                 onClick={() => setActive(c)}
               >
-                {c}
+                {c === "All" && `All (${programs.length})`}
+                {c === "Common Core" && `📚 Core Business (8)`}
+                {c === "Cybersecurity" && `🛡️ Cybersecurity (8)`}
+                {c === "Electives" && `⚡ Electives (6)`}
               </button>
             ))}
           </div>
 
-          {/* Cards */}
+          {/* Cards grid */}
           <div className="prog-grid">
-            {filtered.map((prog) => (
-              <div className="program-card" key={prog.code}>
+            {filtered.map(p => (
+              <div className="prog-card" key={p.code}>
                 <div className="card-top">
-                  <div className="card-icon">{prog.icon}</div>
-                  {prog.tag && (
-                    <span className={`card-tag ${
-                      prog.tag === "Core" ? "tag-core" :
-                      prog.tag === "Capstone" ? "tag-capstone" :
-                      "tag-new"
-                    }`}>
-                      {prog.tag}
-                    </span>
+                  <div className="card-icon">{p.icon}</div>
+                  {p.tag && (
+                    <span className={`ctag ${
+                      p.tag === "Core" ? "ctag-core" :
+                      p.tag === "Capstone" ? "ctag-capstone" : "ctag-new"
+                    }`}>{p.tag}</span>
                   )}
                 </div>
-                <div className="card-code">{prog.code}</div>
-                <div className="card-title">{prog.title}</div>
-                <div className="card-meta">
-                  <div className="card-meta-item">📅 <span>{prog.duration}</span></div>
-                  <div className="card-meta-item">🏷️ <span>{prog.dept}</span></div>
+                <div className="card-code">{p.code}</div>
+                <div className="card-title">{p.title}</div>
+                <div className="card-foot">
+                  <div className="card-chip">📅 <b>{p.trim}</b></div>
+                  <div className="card-chip">🏷️ <b>{p.dept}</b></div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="prog-bottom">
-            <a href="/courses" className="view-all-btn">View Full Curriculum →</a>
+          {/* Footer row */}
+          <div className="prog-footer">
+            <div className="prog-footer-left">
+              Showing <strong>{filtered.length} of {programs.length}</strong> subjects ·
+              Start date: <strong>March 2027</strong> ·
+              Campus: <strong>Petersham NSW</strong>
+            </div>
+            <a href="/courses" className="view-btn">View Full Curriculum →</a>
           </div>
 
         </div>

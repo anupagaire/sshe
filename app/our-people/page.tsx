@@ -67,27 +67,62 @@ const teamData: TeamSection[] = [
       },
     ],
   },
-  {
+ {
     title: "CAC Members",
-    description: "Our Curriculum Advisory Committee (CAC) ensures Atlas's programs are current, relevant, and aligned with industry and regulatory requirements.",
+    description: "Our Course Advisory Committee (CAC) ensures Atlas's programs are current, relevant, and aligned with industry and regulatory requirements.",
     members: [
       {
-        name: "A/Prof Seedwell Sithole",
-        role: "Chair",
+        name: "A/Prof. Seedwell T.M. Sithole",
+        role: "CAC Chair",
         email: "Seedwell.sithole@avondale.edu.au",
         image: "/team/seed.webp",
-        bio: "Associate Professor Seedwell Sithole is a distinguished academic leader with expertise in accounting, curriculum design, and online program development. As former Associate Dean (Learning & Teaching) at the University of Tasmania, he led the design and launch of fully online business programs and drove digital transformation aligned with AACSB standards. He has led accreditation processes and contributed to academic governance across multiple institutions.",
-        qualifications: ["Associate Professor, Avondale University", "Former Associate Dean (L&T), University of Tasmania", "AACSB Accreditation Expert"],
+        bio: "Associate Professor Seedwell Sithole is a distinguished academic leader with expertise in accounting, curriculum design, and TEQSA accreditation. He has led the development, review and accreditation of numerous higher education courses and chaired various academic committees. His research interests include accounting education, corporate governance, entrepreneurship, sustainability reporting and higher education policy.",
+        qualifications: ["Associate Professor, Avondale University", "TEQSA Accreditation Expert", "AQF & Higher Education Governance"],
       },
       {
         name: "Prof. Lucia Carrion Gordon",
-        role: "Dean & Co-Chair",
+        role: "Dean & CAC Member",
         email: "lucia@aahm.edu.au",
         image: "/team/lucia.jpeg",
-        bio: "Professor Dr. Lucia Carrion Gordon is an accomplished researcher and lecturer with distinguished academic credentials and advanced technological expertise. She is committed to fostering innovative ideas and solutions, with proven expertise in data analysis and diverse research methodologies. Known for her integrity and adaptability, she excels in culturally diverse environments and has a strong track record in stakeholder engagement and academic leadership.",
-        qualifications: ["Prof. Dr² — Dual Doctorate", "Expert in Data Analysis & Research Methodologies", "Alumni, University of Technology Sydney"],
+        bio: "Professor Dr. Lucia Carrion Gordon holds two doctoral degrees — a PhD in Computer Science (UTS) and a PhD in Business Administration. With over 16 years in Australian higher education, she has taught and collaborated with institutions including Australian Catholic University and La Trobe University. Her interdisciplinary expertise in both business and cybersecurity is central to the proposed Bachelor of Business.",
+        qualifications: ["Prof. Dr² — Dual Doctorate", "PhD Computer Science, UTS", "Expert: Cybersecurity & Business"],
       },
-     
+      {
+        name: "Dr. Sajal Roy",
+        role: "CAC Member",
+        email: "roysajal.wgs@gmail.com",
+        image: "/team/sajal.jpeg",
+        bio: "Dr. Sajal Roy leads the People-Centred Leadership Research Cluster in Australia, supervising nine Master's by Research students. He has collaborated with the University of Salford (UK) and the University of Canberra. His research spans social impact, impact investment, organisational capability and management. He is currently developing his sixth book on the impact of conflict on international value chains.",
+        qualifications: ["PhD — Human Services & Social Work", "People-Centred Leadership Research Cluster Lead", "Collaborator: University of Salford UK"],
+      },
+      
+       {
+        name: "A/Prof. Sudipta Bose",
+        role: "CAC Member",
+        image: "/team/sudipta.png",
+        bio: "Associate Professor Sudipta Bose is an Associate Professor of Accounting at the University of Newcastle. With over 10 years in academia following 6 years in industry with a multinational company, he served as Program Director for the Master of Professional Accounting at Newcastle for six years. He has published more than 60 A* and A-ranked journal articles according to ABDC rankings.",
+        qualifications: ["Associate Professor, University of Newcastle", "Former Program Director, MPA Newcastle", "60+ A*/A-Ranked ABDC Publications"],
+      },
+      {
+        name: "Dr. Arash (Ash) Najmaei",
+        role: "CAC Member",
+        image: "/team/ash.jpeg",
+        bio: "Dr. Arash Najmaei leads the Artificial Intelligence and Advanced Analytics in Marketing and Branding Research Cluster at Melbourne Institute of Technology. He holds a PhD from Macquarie University and completed a postdoctoral fellowship in Big Data and AI. Previously Head of AI at leading organisations including EY, Kantar and CT Group, he brings rare combined academic and industry expertise in AI and digital transformation.",
+        qualifications: ["PhD, Macquarie University", "Former Head of AI — EY, Kantar, CT Group", "AI & Big Data Analytics Expert"],
+      },{
+        name: "Dr. Nilima Paul",
+        role: "CAC Member",
+        image: "/team/placeholder.png",
+        bio: "Dr. Nilima Paul brings over 40 years of professional experience in Accounting and more than 30 years of teaching across several Australian universities. Currently a full-time Lecturer at Charles Darwin University, her areas of expertise include VET accreditation, higher education accreditation, curriculum development and quality assurance.",
+        qualifications: ["Lecturer, Charles Darwin University", "40+ Years Accounting Experience", "VET & HE Accreditation Expert"],
+      },
+         {
+        name: "Dr. Fazla Rabby",
+        role: "CAC Member",
+        image: "/team/placeholder.png",
+        bio: "Dr. Fazla Rabby specialises in cybersecurity, artificial intelligence, blockchain technologies and IT marketing. With over 20 years of industry experience across Australia and overseas, he brings deep expertise in information technology, cybersecurity and digital innovation. He has recently published three books in the past two years and is actively engaged in ongoing research and scholarly publishing.",
+        qualifications: ["PhD — IT & Marketing", "20+ Years Industry Experience", "Cybersecurity & Blockchain Expert"],
+      },
       {
         name: "Dr. Ratan Ghosh",
         role: "Member",
@@ -96,14 +131,7 @@ const teamData: TeamSection[] = [
         bio: "Dr. Ratan Ghosh is a PhD Researcher in Accounting and Finance at the Australian Catholic University and an Emerald Literati Award Winner. He specialises in Finance, Accounting, Forensic Auditing, and Business Data Analytics. Proficient in Stata, SPSS, and NVivo, he brings expertise in unit coordination, curriculum development, and technology-enabled education through platforms such as Canvas and Moodle.",
         qualifications: ["PhD Candidate, Australian Catholic University", "Emerald Literati Award Winner", "Expert: Stata, SPSS, NVivo"],
       },
-      {
-        name: "Dr. Sajal Roy",
-        role: "Member",
-        email: "roysajal.wgs@gmail.com",
-        image: "/team/sajal.jpeg",
-        bio: "Dr. Sajal Roy is an established academic and dedicated researcher in human services with expertise spanning community services, social work, sociology, and gender and development studies. He has held impactful roles at UNSW and UTS, contributing to social impact, financial wellbeing, and climate change resilience projects. A proactive educator, he excels in curriculum development and student mentorship, promoting multicultural perspectives in higher education.",
-        qualifications: ["PhD — Human Services & Social Work", "Former Academic, UNSW & UTS", "CHC52021 Diploma of Community Services"],
-      },
+     
     ],
   },
 ];
@@ -139,7 +167,7 @@ export default function OurPeoplePage() {
                 {[
                   { num: '3', label: 'Board Members' },
                   { num: '3', label: 'Academic Board' },
-                  { num: '5', label: 'CAC Members' },
+                  { num: '8', label: 'CAC Members' },
                 ].map(({ num, label }) => (
                   <div key={label}>
                     <p className="text-3xl font-bold" style={{ color: '#7dd3fc' }}>{num}</p>
