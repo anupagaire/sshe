@@ -24,16 +24,16 @@ const teamData: TeamSection[] = [
     description: "Our Board of Directors provides strategic oversight and governance to ensure Atlas delivers on its mission of excellence in education.",
     members: [
       {
-        name: "Professor Dr. Greg Whitely",
+        name: "Professor Dr. Greg Whateley",
         role: "Board Member",
         image: "/team/Greg-Whateley-1.png",
-        bio: "Professor Dr. Greg Whitely brings decades of academic leadership and governance experience to the Atlas Board, guiding the institution's strategic direction and educational standards.",
+        bio: "Professor Dr. Greg Whateley brings decades of academic leadership and governance experience to the Atlas Board, guiding the institution's strategic direction and educational standards.",
       },
       {
-        name: "Sir Gerald Newman",
+        name: "Sir Gerard  Newcombe",
         role: "Board Member",
         image: "/team/gerard.jpeg",
-        bio: "Sir Gerald Newman contributes extensive expertise in institutional governance and education policy, supporting Atlas in achieving its vision for quality higher education.",
+        bio: "Sir Gerard  Newcombe contributes extensive expertise in institutional governance and education policy, supporting Atlas in achieving its vision for quality higher education.",
       },
       {
         name: "Puna Bhandari",
@@ -48,10 +48,10 @@ const teamData: TeamSection[] = [
     description: "The Academic Board upholds the integrity and quality of Atlas's academic programs, ensuring our curriculum meets the highest standards.",
     members: [
       {
-        name: "Sir Gerald Newman",
+        name: "Sir Gerard Newcombe",
         role: "Academic Board Member",
         image: "/team/gerard.jpeg",
-        bio: "Sir Gerald Newman provides vital academic governance expertise, ensuring Atlas's programs maintain rigorous quality standards and alignment with industry needs.",
+        bio: "Sir Gerard  Newcombe provides vital academic governance expertise, ensuring Atlas's programs maintain rigorous quality standards and alignment with industry needs.",
       },
       {
         name: "Craig Ilis",
