@@ -54,13 +54,13 @@ const teamData: TeamSection[] = [
         bio: "Sir Gerard  Newcombe provides vital academic governance expertise, ensuring Atlas's programs maintain rigorous quality standards and alignment with industry needs.",
       },
       {
-        name: "Craig Ilis",
+        name: "Professor Craig Ellis PhD",
         role: "Academic Board Member",
         image: "/team/craig.png",
         bio: "Professor Craig Ellis has over 20 years’ higher education industry experience with the last 10 in senior management and executive roles, including the positions of Associate Dean (Academic) and Acting Executive Dean, as well as Non-executive Director of Western Sydney University Enterprises (formerly UWS College). ",
       },
       {
-        name: "Andy West",
+        name: " Professor Andy West",
         role: "Academic Board Member",
         image: "/team/andy.jpeg",
         bio: "Andy West brings practical industry insight to the Academic Board, bridging the gap between academia and professional practice in Atlas's educational offerings.",
